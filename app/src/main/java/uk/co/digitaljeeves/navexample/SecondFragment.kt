@@ -29,6 +29,8 @@ class SecondFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentSecondBinding.inflate(inflater, container, false)
+        val input = requireArguments().getString("user_input")
+        binding.tvName.text = input
         return binding.root
     }
 
